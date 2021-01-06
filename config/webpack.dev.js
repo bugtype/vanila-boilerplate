@@ -1,10 +1,11 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// dev server 실행용
+console.log('config development');
+
+console.log(__dirname);
+
 module.exports = {
   entry: './src/index.ts',
-  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -14,10 +15,12 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: ['css-loader'],
       },
     ],
   },
+  mode: 'development', // 내장
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
@@ -27,5 +30,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    path: path.join(__dirname, '../public'),
+    filename: 'bundle.js',
+  },
+  optimization: {
+    minimize: false,
   },
 };

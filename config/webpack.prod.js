@@ -1,7 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// dev server 실행용
+console.log('config production');
+// TODO: optimization, minify 등 설정 해야함.
 module.exports = {
   entry: './src/index.ts',
   plugins: [new MiniCssExtractPlugin()],
@@ -18,6 +19,7 @@ module.exports = {
       },
     ],
   },
+  mode: 'production',
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
@@ -27,5 +29,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    path: path.join(__dirname, '../public'),
+    filename: 'bundle.js',
   },
 };

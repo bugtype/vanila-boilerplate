@@ -1,7 +1,7 @@
 import { Word } from '../entities';
 import { httpClient } from '../libs';
 
-const url = 'https://my-json-server.typicode.com/kakaopay-fe/resources/words';
+const url = 'https://';
 
 interface IWordService {
   getAll: () => Promise<Word[]>;
@@ -26,7 +26,7 @@ const tempData = [
   },
   {
     second: 15,
-    text: 'kakaopay',
+    text: 'frontend-bugtype',
   },
   {
     second: 5,
@@ -38,7 +38,7 @@ const tempData = [
   },
   {
     second: 15,
-    text: 'kakaopay',
+    text: 'frontend-bugtype',
   },
   {
     second: 15,

@@ -6,8 +6,10 @@
   "scripts": {
     "test": "jest",
     "clear-jest": "jest --clearCache",
-    "build": "webpack",
-    "start": "webpack serve"
+    "build:dev": "webpack --config=config/webpack.dev.js",
+    "build:prod": "webpack --config=config/webpack.prod.js",
+    "start:dev": "npm run build:dev && webpack serve",
+    "start:prod": "npm run build:prod && webpack serve"
   },
   "author": "",
   "license": "ISC",

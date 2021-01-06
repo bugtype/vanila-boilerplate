@@ -1,6 +1,6 @@
 import { Component } from './helper';
 import { router } from './libs';
-import { HomePage, ResultPage } from './pages';
+import { HomePage } from './pages';
 import './style.css';
 export default class App extends Component {
   $target: HTMLElement = null;
@@ -16,10 +16,10 @@ export default class App extends Component {
           path: '/',
           component: HomePage,
         },
-        {
-          path: '/result',
-          component: ResultPage,
-        },
+        // {
+        //   path: '/result',
+        //   component: ResultPage,
+        // },
       ],
       failPage: HomePage,
       hash: true,
