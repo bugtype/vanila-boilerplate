@@ -1,0 +1,74 @@
+@-moz-keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+@-webkit-keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+@-o-keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+
+.result-root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.result-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.result-root > div {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.result-score {
+  font-size: 1.5rem;
+
+  -moz-animation: 1s ease-out 0s 1 scaleAnimation;
+  -webkit-animation: 1s ease-out 0s 1 scaleAnimation;
+  -o-animation: 1s ease-out 0s 1 scaleAnimation;
+  animation: 1s ease-out 0s 1 scaleAnimation;
+}
+
+.result-avg-time {
+  font-size: 0.8rem;
+}

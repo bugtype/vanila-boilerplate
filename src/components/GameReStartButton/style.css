@@ -1,0 +1,9 @@
+.game-button {
+  background-color: #0da1ff;
+  color: white;
+  text-align: center;
+
+  width: 150px;
+  padding: 10px;
+  margin: auto;
+}

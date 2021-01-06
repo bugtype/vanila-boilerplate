@@ -1,0 +1,192 @@
+@-moz-keyframes minus-score-animation {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: -30px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes minus-score-animation {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: -30px;
+    opacity: 0;
+  }
+}
+@-o-keyframes minus-score-animation {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: -30px;
+    opacity: 0;
+  }
+}
+@keyframes minus-score-animation {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: -30px;
+    opacity: 0;
+  }
+}
+.header-minus {
+  position: relative;
+  text-align: right;
+  opacity: 0;
+  color: red;
+}
+
+.minus__animation {
+  -moz-animation: 0.8s ease-in-out 0s 1 minus-score-animation;
+  -webkit-animation: 0.8s ease-in-out 0s 1 minus-score-animation;
+  -o-animation: 0.8s ease-in-out 0s 1 minus-score-animation;
+  animation: 0.8s ease-in-out 0s 1 minus-score-animation;
+}
+
+.game-button {
+  background-color: #0da1ff;
+  color: white;
+  text-align: center;
+
+  width: 150px;
+  padding: 10px;
+  margin: auto;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30%;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-header > div {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.home-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.home-word {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.home-board > input {
+  background-color: #0da1ff;
+  border-radius: 15px;
+  border-width: 0px;
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.home-board > input::placeholder {
+  font-size: 1.2rem;
+  color: white;
+}
+
+@-moz-keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+@-webkit-keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+@-o-keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: perspective(100px) translateZ(0px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
+
+.result-root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.result-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.result-root > div {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.result-score {
+  font-size: 1.5rem;
+
+  -moz-animation: 1s ease-out 0s 1 scaleAnimation;
+  -webkit-animation: 1s ease-out 0s 1 scaleAnimation;
+  -o-animation: 1s ease-out 0s 1 scaleAnimation;
+  animation: 1s ease-out 0s 1 scaleAnimation;
+}
+
+.result-avg-time {
+  font-size: 0.8rem;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
