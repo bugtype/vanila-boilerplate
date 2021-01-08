@@ -2,8 +2,6 @@ const path = require('path');
 
 console.log('config development');
 
-console.log(__dirname);
-
 module.exports = {
   entry: './src/index.ts',
   module: {
@@ -19,7 +17,7 @@ module.exports = {
       },
     ],
   },
-  mode: 'development', // 내장
+  mode: 'development', // webpack 내장 설정
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './public',
