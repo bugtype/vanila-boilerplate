@@ -1,11 +1,33 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 console.log('config production');
 // TODO: optimization, minify 등 설정 해야함.
 module.exports = {
-  entry: './src/index.ts',
-  plugins: [new MiniCssExtractPlugin()],
+  entry: {
+    index: {
+      import: './src/index.ts',
+      // dependOn: 'shared',
+    },
+    // another: {
+    //   import: './src/another-module.js',
+    //   dependOn: 'shared',
+    // },
+    // shared: 'lodash',
+  },
+
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(),
+    // new htmlWebpackPlugin(),
+    new htmlWebpackPlugin({
+      template: path.join(__dirname, '../src/index.html'),
+      inject: true,
+      filename: path.join(__dirname, '../public/index.html'),
+    }),
+  ],
   module: {
     rules: [
       {
@@ -32,6 +54,12 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../public'),
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 };
